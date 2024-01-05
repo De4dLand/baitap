@@ -53,7 +53,7 @@ public class customAdapter extends ArrayAdapter<Contact> {
         holder.tvAvatar.setBackgroundColor(Color.green(1));
         holder.tvName.setText(contact.getName());
         holder.tvPhone.setText(contact.getPhone());
-        return super.getView(position, convertView, parent);
+        return convertView;
     }
 
     public class ViewHolder
