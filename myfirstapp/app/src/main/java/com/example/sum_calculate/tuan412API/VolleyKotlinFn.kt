@@ -13,7 +13,7 @@ class VolleyKotlinFn {
         //1. Tạo request
         val quere = Volley.newRequestQueue(context)
         //2. url
-        val url ="http://172.16.5.59:8080/ajson/a.json"
+        val url ="http://172.23.80.1:8080/ajson/a.json"
         //3. Gọi request(MẢng của các đối tượng
         //        val request = JsonArrayRequest(url, thanhcong, thatbai)
         val request = JsonArrayRequest(url,Response.Listener{

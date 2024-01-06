@@ -16,7 +16,7 @@ class Tuan412MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tuan412_main)
         btn1 = findViewById(R.id.btn1)
         tv1 = findViewById(R.id.tv1)
-        var Fn = VolleyKotlinFn()
-        btn1!!.setOnClickListener{Fn.getJSON_Array_Objiect(context,tv1!!)}
+        val fn = VolleyKotlinFn()
+        btn1!!.setOnClickListener{fn.getJSON_Array_Objiect(context,tv1!!)}
     }
 }

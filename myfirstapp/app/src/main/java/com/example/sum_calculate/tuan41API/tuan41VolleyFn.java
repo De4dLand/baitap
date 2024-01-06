@@ -20,7 +20,7 @@ public class tuan41VolleyFn {
         //1. Tạo request
         RequestQueue queue = Volley.newRequestQueue(context);
         //2. URL
-        String url = "http://172.16.5.59:8080/ajson/a.json";
+        String url = "http://172.23.80.1:8080/ajson/a.json";
         //3. Gọi request // JsonArrayRequest(url, thanhcong, thatbai)
         JsonArrayRequest request = new JsonArrayRequest(url,new  Response.Listener<JSONArray>() {
             @Override
@@ -51,6 +51,6 @@ public class tuan41VolleyFn {
             }
         });
         //4. Thực thi request
-
+        queue.add(request);
     }
 }

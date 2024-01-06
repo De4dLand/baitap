@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,20 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light"
+        android:usesCleartextTraffic="true"
         tools:targetApi="33">
         <activity
             android:name=".tuan412API.Tuan412MainActivity"
-            android:exported="true" >
-            <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".tuan41API.tuan411MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".tuan41API.tuan41MainActivity"
@@ -36,7 +34,7 @@
             android:exported="false" />
         <activity
             android:name=".tuan31.Tuan31Main1Activity"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".tuan31.tuan31SecondActivity"
             android:exported="false" />
