@@ -17,6 +17,6 @@ class Tuan412MainActivity : AppCompatActivity() {
         btn1 = findViewById(R.id.btn1)
         tv1 = findViewById(R.id.tv1)
         val fn = VolleyKotlinFn()
-        btn1!!.setOnClickListener{fn.getJSON_Array_Objiect(context,tv1!!)}
+        btn1!!.setOnClickListener{fn.getJSON_Array_Object(context,tv1!!)}
     }
 }

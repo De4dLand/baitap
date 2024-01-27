@@ -2,21 +2,20 @@ package com.example.sum_calculate.tuan412API
 
 import android.content.Context
 import android.widget.TextView
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 
 class VolleyKotlinFn {
     var strJSON = ""
-    fun getJSON_Array_Objiect(context: Context, textview: TextView)
+    fun getJSON_Array_Object(context: Context, textview: TextView)
     {
         //1. Tạo request
         val quere = Volley.newRequestQueue(context)
-        //2. url
-        val url ="http://172.23.80.1:8080/ajson/a.json"
-        //3. Gọi request(MẢng của các đối tượng
+        //2. URL
+        val url = "http://192.168.1.100/ajson/a.json"
+        //3. Gọi request(MẢng của các đối tượng)
         //        val request = JsonArrayRequest(url, thanhcong, thatbai)
-        val request = JsonArrayRequest(url,Response.Listener{
+        val request = JsonArrayRequest(url, {
             response ->  for (i in 0 until response.length())
         {
             //lấy các đối tượng
@@ -31,7 +30,7 @@ class VolleyKotlinFn {
         }
                 textview.text = strJSON
 
-        },Response.ErrorListener {
+        }, {
             error -> textview.text= error.message
         })
         quere.add(request)

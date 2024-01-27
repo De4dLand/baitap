@@ -20,9 +20,9 @@ public class tuan41VolleyFn {
         //1. Tạo request
         RequestQueue queue = Volley.newRequestQueue(context);
         //2. URL
-        String url = "http://172.23.80.1:8080/ajson/a.json";
+        String url = "http://192.168.1.100/ajson/a.json";
         //3. Gọi request // JsonArrayRequest(url, thanhcong, thatbai)
-        JsonArrayRequest request = new JsonArrayRequest(url,new  Response.Listener<JSONArray>() {
+        JsonArrayRequest request = new JsonArrayRequest(url,new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 //Chuyển mảng sang các đối tượng
@@ -33,16 +33,15 @@ public class tuan41VolleyFn {
                         String id = person.getString("id");//Lấy về id
                         String name = person.getString("name");
                         String email = person.getString("email");
-                        strJSON +="id  = " +id + "\n";
-                        strJSON +="name  = " +name + "\n";
-                        strJSON +="email  = " +email + "\n";
+                        strJSON +="id  = " +id+ "\n";
+                        strJSON +="name  = " +name+ "\n";
+                        strJSON +="email  = " +email+ "\n";
                     } catch (JSONException e)
                     {
                         throw  new RuntimeException(e);
                     }
                     textView.setText(strJSON);
                 }
-
             }
         }, new Response.ErrorListener() {
             @Override

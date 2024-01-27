@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
+//import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,11 +21,6 @@ public class tuan411MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.tuan411btn1);
         tv1 = findViewById(R.id.tuan411TVKQ);
         tuan41VolleyFn volleyFn= new tuan41VolleyFn();
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                volleyFn.getJSONArrayOfObject(context,tv1);
-            }
-        });
+        btn1.setOnClickListener(v -> volleyFn.getJSONArrayOfObject(context,tv1));
     }
 }
